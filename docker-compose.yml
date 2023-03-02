@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  go:
+    build: 
+      dockerfile: Dockerfile
+      context: ./
+    volumes:
+      - ./:/app
+    container_name: go-programming
+    environment:
+     - ./.env
+    ports:
+      - "8080:8080"
